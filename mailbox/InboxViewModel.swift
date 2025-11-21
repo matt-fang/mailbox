@@ -10,6 +10,7 @@ import Observation
 
 @Observable final class InboxViewModel {
     let firestore = FirestoreManager()
+    var firstMessage: String = ""
     
     func addData(_ message: String, from author: String) {
         Task {
@@ -19,6 +20,16 @@ import Observation
                 print("Error adding data: \(error.localizedDescription)")
             }
         }
-        
+    }
+    
+    func retrieveFirstMessage(from author: String){
+        Task {
+            do {
+                let message = try await firestore.getFirstMessage(from: author)
+                self.firstMessage = message
+            } catch {
+                print("Error getting message: \(error.localizedDescription)")
+            }
+        }
     }
 }
