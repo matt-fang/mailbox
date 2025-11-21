@@ -10,10 +10,14 @@ import FirebaseCore
 import FirebaseDatabase
 
 final class RealtimeDatabaseManager {
-    var ref: DatabaseReference! = Database.database().reference()
+    var msgRef: DatabaseReference! = Database.database().reference().child("latestMessage")
     
     func setLatestMessage(_ message: String) {
-        ref.child("latest-message").setValue(message)
+        msgRef.setValue(message)
+    }
+    
+    func getLatestMessage() {
+        return
     }
 
 }

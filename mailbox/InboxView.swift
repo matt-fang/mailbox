@@ -9,19 +9,16 @@ import SwiftUI
 
 struct InboxView: View {
     @State var viewModel = InboxViewModel()
-    
+    @State var messageService = MessageService()
     @State var inputText: String = ""
     
     let targetAuthor = "Matthew"
-    var latestMessage: String = ""
     
     var body: some View {
         VStack {
             
+            Text("latest message is: \(messageService.latestMessage)")
             TextField("Enter message", text: $inputText)
-                .onChange(of: inputText) { _ in
-                    viewModel.setLatestMessage(inputText)
-                }
             
             Image(systemName: "globe")
                 .imageScale(.large)
@@ -36,6 +33,12 @@ struct InboxView: View {
                     .font(.largeTitle)
             }
             
+        }
+        .onAppear {
+            messageService.startListening()
+        }
+        .onDisappear {
+            messageService.stopListening()
         }
         .padding()
     }
