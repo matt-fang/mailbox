@@ -12,6 +12,7 @@
 		A550919E2ECFEAAD00A69FCD /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A550919D2ECFEAAD00A69FCD /* FirebaseCore */; };
 		A55091A02ECFEAAD00A69FCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A550919F2ECFEAAD00A69FCD /* FirebaseFirestore */; };
 		A55091A22ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A55091A12ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta */; };
+		A55091A82ED00D3A00A69FCD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A55091A72ED00D3A00A69FCD /* FirebaseDatabase */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A55091A82ED00D3A00A69FCD /* FirebaseDatabase in Frameworks */,
 				A550919A2ECFEAAD00A69FCD /* FirebaseAnalytics in Frameworks */,
 				A55091A02ECFEAAD00A69FCD /* FirebaseFirestore in Frameworks */,
 				A550919E2ECFEAAD00A69FCD /* FirebaseCore in Frameworks */,
@@ -130,6 +132,7 @@
 				A550919D2ECFEAAD00A69FCD /* FirebaseCore */,
 				A550919F2ECFEAAD00A69FCD /* FirebaseFirestore */,
 				A55091A12ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta */,
+				A55091A72ED00D3A00A69FCD /* FirebaseDatabase */,
 			);
 			productName = mailbox;
 			productReference = A5E1DB142ECFE27200D0B57D /* mailbox.app */;
@@ -673,6 +676,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A55091982ECFEAAD00A69FCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = "FirebaseInAppMessaging-Beta";
+		};
+		A55091A72ED00D3A00A69FCD /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A55091982ECFEAAD00A69FCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

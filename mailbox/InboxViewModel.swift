@@ -10,7 +10,17 @@ import Observation
 
 @Observable final class InboxViewModel {
     let firestore = FirestoreManager()
+    let realtimeDatabase = RealtimeDatabaseManager()
+    
     var firstMessage: String = ""
+    
+    // MARK: Realtime Database methods
+    
+    func setLatestMessage(_ message: String) {
+        realtimeDatabase.setLatestMessage(message)
+    }
+    
+    // MARK: Firestore methods
     
     func addData(_ message: String, from author: String) {
         Task {
