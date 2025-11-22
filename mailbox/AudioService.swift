@@ -18,12 +18,22 @@ final class AudioService {
     
     private var observer: Any?
     
-    var time: CGFloat?
+    var time: CGFloat {
+        get {
+            return CGFloat(player?.currentTime().seconds ?? 0)
+        }
+        set {
+            player?.pause()
+            player?.seek(to: CMTime(seconds: Double(newValue), preferredTimescale: 600))
+            player?.pause()
+        }
+    }
 
     func play(url: String) {
         guard let url = URL(string: url) else { return }
         let playerItem = AVPlayerItem(url: url)
         
+        player = AVPlayer(playerItem: playerItem)
         player?.play()
         
         duration = player?.currentItem?.asset.duration
