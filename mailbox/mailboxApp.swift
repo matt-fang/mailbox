@@ -14,7 +14,7 @@ struct mailboxApp: App {
     
     var body: some Scene {
         WindowGroup {
-            InboxView()
+            MessageListView()
         }
     }
 }

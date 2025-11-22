@@ -8,7 +8,7 @@
 import SwiftUI
 import AVFoundation
 
-struct InboxView: View {
+struct OldInboxView: View {
     @State var viewModel = InboxViewModel()
     @State var messageService = MessageService()
     @State var inputText: String = ""
@@ -44,7 +44,7 @@ struct InboxView: View {
             
         }
         .onAppear {
-            messageService.startListening()
+            messageService.startListening(for: .latest)
         }
         .onDisappear {
             messageService.stopListening()
@@ -54,5 +54,5 @@ struct InboxView: View {
 }
 
 #Preview {
-    InboxView()
+    OldInboxView()
 }
