@@ -45,6 +45,7 @@ final class MessageService {
                         self.allMessageURLs.append(data)
                     }
                 }
+                self.allMessageURLs.reverse()
             }
         }
     }

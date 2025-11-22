@@ -37,7 +37,7 @@ struct OldInboxView: View {
             }
             
             Button {
-                audioService.player?.timeControlStatus != .playing ? audioService.play(url: TEST_URL) : audioService.pause()
+                audioService.player?.timeControlStatus != .playing ? audioService.play(url: TEST_URL) : audioService.playPause()
             } label: {
                 audioService.player?.timeControlStatus != .playing ? Image(systemName: "play") : Image(systemName: "pause")
             }
