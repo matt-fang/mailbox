@@ -42,7 +42,7 @@ struct MessageRowView: View {
         HStack {
             Text(title)
             
-            PlaybackSlider(value: $audioService.time, in: 0...CGFloat(audioService.duration?.seconds ?? 0))
+            PlaybackSlider(audioService: audioService)
             
             Spacer()
             
