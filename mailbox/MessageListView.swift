@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+internal import CoreMedia
 
 struct MessageListView: View {
     @State var messageService = MessageService()
@@ -14,9 +15,6 @@ struct MessageListView: View {
     var body: some View {
             
         NavigationStack {
-            
-            PlaybackSlider(value: $progress, in: 0...100)
-            
             List {
                 ForEach(messageService.allMessageURLs, id: \.self) { messageURL in
                     MessageRowView(timestamp: "Nov 21", title: "hi", URL: "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")
@@ -43,6 +41,8 @@ struct MessageRowView: View {
     var body: some View {
         HStack {
             Text(title)
+            
+            PlaybackSlider(value: $audioService.time, in: 0...CGFloat(audioService.duration?.seconds ?? 0))
             
             Spacer()
             
