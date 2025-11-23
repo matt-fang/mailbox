@@ -10,6 +10,7 @@ internal import CoreMedia
 
 struct MessageListView: View {
     @Environment(\.dismiss) var dismiss
+    @Environment(\.colorScheme) var colorScheme
     
     @State var user: User
     
@@ -23,33 +24,51 @@ struct MessageListView: View {
     }
     
     var body: some View {
-            
-        NavigationStack {
-            ScrollView {
-                LazyVStack(spacing: 14) {
-                    ForEach(messageService.allMessages) { message in
-                        MessageRowView(messageService: messageService, message: message)
-                        Divider()
-                        .gridCellUnsizedAxes(.horizontal)
-                    }
-                }
-                .padding(.horizontal)
-                .padding(.vertical, 10)
-            }
-            .navigationTitle("\(user.name)'s Mailbox")
-            .navigationBarTitleDisplayMode(.large)
-            .toolbar {
-                ToolbarItem(placement: .topBarTrailing) {
-                    Button {
-                        dismiss()
-                    } label: {
-                        Image(systemName: "person.circle")
-                    }
+        ZStack{
+            if messageService.allMessages.isEmpty {
+                VStack {
+                    Image(systemName: "tray")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .frame(width: 75)
+                        .foregroundStyle(.quaternary)
+                    
+                    Text("No messages yet.")
+                        .multilineTextAlignment(.center)
+                        .monospaced()
+                        .foregroundStyle(.secondary)
+                        .padding(.horizontal, 50)
+                        .padding(.vertical, 16)
 
                 }
+                
+            } else {
+                ScrollView {
+                    LazyVStack(spacing: 14) {
+                        ForEach(messageService.allMessages) { message in
+                            MessageRowView(messageService: messageService, message: message)
+                            Divider()
+                                .gridCellUnsizedAxes(.horizontal)
+                        }
+                    }
+                    .padding(.horizontal)
+                    .padding(.vertical, 10)
+                }
             }
-            .navigationBarBackButtonHidden()
         }
+        .navigationTitle("\(user.name)'s Mailbox")
+        .navigationBarTitleDisplayMode(.large)
+        .toolbar {
+            ToolbarItem(placement: .topBarTrailing) {
+                Button {
+                    dismiss()
+                } label: {
+                    Image(systemName: "person.circle")
+                }
+                
+            }
+        }
+        .navigationBarBackButtonHidden()
         .onAppear {
             messageService.startListening(for: .all)
         }
@@ -60,5 +79,5 @@ struct MessageListView: View {
 }
 
 #Preview {
-    MessageListView(user: User(name: "Alfred", friendName: "Matthew"))
+    MessageListView(user: User(name: "Matthew", friendName: "Alfred"))
 }

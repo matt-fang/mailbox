@@ -8,7 +8,9 @@
 import SwiftUI
 
 struct OnboardingView: View {
-    @State private var selectedName: String = "Alfred"
+    @Environment(\.colorScheme) var colorScheme
+    
+    @State private var selectedName: String = "Select your name"
     var nameOptions: [String] = ["Matthew", "Alfred"]
     var friendPairs: [String: String] = ["Matthew" : "Alfred",
                                          "Alfred" : "Matthew",
@@ -16,39 +18,43 @@ struct OnboardingView: View {
                                          "Hayden" : "Devon"]
     
     var body: some View {
-        VStack {
-            Spacer()
-            Image("lighticon")
-                .resizable()
-                .frame(width: 200, height: 200)
+            
             VStack {
-                Text("Welcome to Mailbox,")
-                    .font(.system(size: 32, weight: .bold))
-                
-                Picker("Name", selection: $selectedName) {
-                    ForEach(nameOptions, id: \.self) { option in
-                        Text(option).tag(option)
+                Spacer()
+                Image(colorScheme == .light ? "lighticon" : "darkicon")
+                    .resizable()
+                    .frame(width: 200, height: 200)
+                VStack {
+                    Text("Welcome to Mailbox")
+                        .font(.system(size: 32, weight: .semibold))
+                    
+                    Picker("Name", selection: $selectedName) {
+                        Text("My name is").tag("Select your name")
+                        ForEach(nameOptions, id: \.self) { option in
+                            Text(option).tag(option)
+                        }
                     }
+                    .pickerStyle(.automatic)
+                    .padding(.top, -10)
                 }
-                .pickerStyle(.automatic)
-                .padding(.top, -6)
-            }
-            .padding(.top, 20)
-            
-            Spacer()
-            
-            NavigationLink {
-                MessageListView(user: User(name: selectedName, friendName: friendPairs[selectedName] ?? "test"))
-            } label: {
-                Text("Continue")
-                    .fontWeight(.medium)
-                    .padding(.horizontal, 10)
-                    .padding(.vertical, 6)
-            }
-            .tint(.accentColor)
-            .buttonStyle(.bordered)
-            .padding()
+                .padding(.top, 20)
+                
+                Spacer()
+                
+                NavigationLink {
+                    MessageListView(user: User(name: selectedName, friendName: friendPairs[selectedName] ?? "test"))
+                } label: {
+                    Text("Continue")
+                        .fontWeight(.medium)
+                        .padding(.horizontal, 10)
+                        .padding(.vertical, 6)
+                }
+                .tint(.accentColor)
+                .buttonStyle(.bordered)
+                .padding()
+                .disabled(selectedName == "Select your name")
         }
+        
     }
 }
 

@@ -41,6 +41,7 @@ struct MessageRowView: View {
                 } else {
                     Text(date)
                         .transition(.blurReplace)
+                        .monospaced()
                 }
             }
             .animation(.smooth, value: audioService.isPlaying)
