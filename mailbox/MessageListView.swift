@@ -9,8 +9,16 @@ import SwiftUI
 internal import CoreMedia
 
 struct MessageListView: View {
-    @State var messageService = MessageService()
-    @State private var progress: CGFloat = 0.1
+    var user: User
+    
+    @State var messageService: MessageService
+    @State private var progress: CGFloat
+    
+    init(user: User) {
+        self.user = user
+        _messageService = State(wrappedValue: MessageService(user: user))
+        self.progress = 0.1
+    }
     
     var body: some View {
             
@@ -26,7 +34,7 @@ struct MessageListView: View {
                 .padding(.horizontal)
                 .padding(.vertical, 10)
             }
-            .navigationTitle("[Friend]'s Messages")
+            .navigationTitle("\(user.friendName)'s Messages")
         }
         .onAppear {
             messageService.startListening(for: .all)
@@ -95,5 +103,5 @@ struct MessageRowView: View {
 }
 
 #Preview {
-    MessageListView()
+    MessageListView(user: User(name: "Alfred", friendName: "Matthew"))
 }

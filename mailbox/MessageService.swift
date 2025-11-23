@@ -12,16 +12,25 @@ import FirebaseDatabase
 
 @Observable
 final class MessageService {
+    var user: User
     var messageHandle: DatabaseHandle?
     
     // MARK: 'CHILDREN' ARE JUST KEYS - ITEMS IN A NESTED LIST
-    var latestMessage: String = ""
-    var latestRef: DatabaseReference! = Database.database().reference().child("users/Matthew/latestMessage")
+    var latestMessage: String
+    var latestRef: DatabaseReference!
 
-    var allMessages: [Message] = []
-    var allMessagesRef: DatabaseReference! = Database.database().reference().child("users/Matthew/allMessages")
+    var allMessages: [Message]
+    var allMessagesRef: DatabaseReference!
     
     var ref: DatabaseReference!
+    
+    init(user: User) {
+        self.user = user
+        self.latestMessage = ""
+        self.latestRef = Database.database().reference().child("users/\(user.friendName)/latestMessage")
+        self.allMessages = []
+        self.allMessagesRef = Database.database().reference().child("users/\(user.friendName)/allMessages")
+    }
     
     func startListening(for type: ListenerType) {
         

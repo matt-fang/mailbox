@@ -10,7 +10,7 @@ import AVFoundation
 
 struct OldInboxView: View {
     @State var viewModel = InboxViewModel()
-    @State var messageService = MessageService()
+    @State var messageService = MessageService(user: User(name: "Alfred", friendName: "Matthew"))
     @State var inputText: String = ""
     @State var audioService = AudioService()
     
