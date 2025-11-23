@@ -11,11 +11,12 @@ import Firebase
 @main
 struct mailboxApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    var user: User = User(name: "Alfred", friendName: "Matthew")
     
     var body: some Scene {
         WindowGroup {
-            MessageListView(user: user)
+            NavigationStack {
+                OnboardingView()
+            }
         }
     }
 }
