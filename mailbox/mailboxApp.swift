@@ -44,12 +44,23 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNot
         return true
     }
     
+    func application(_ application: UIApplication, didFailToRegisterForRemoteNotificationsWithError error: Error) {
+        print("Failed to register for remote notifications: \(error)")
+    }
+
+    func application(_ application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: Data) {
+        print("Successfully registered for APNS")
+        Messaging.messaging().apnsToken = deviceToken // GIVE FIREBASE YOUR APNS TOKEN
+    }
+    
     func messaging(_ messaging: Messaging, didReceiveRegistrationToken fcmToken: String?) {
-        messaging.token { token, _ in
-            guard let token = token else {
-                return
-            }
-            print("token: \(token)")
+        print("FCM token received: \(fcmToken ?? "nil")")
+        
+        guard let token = fcmToken else {
+            print("FCM token is nil")
+            return
         }
+        
+        print("Valid FCM token: \(token)")
     }
 }
