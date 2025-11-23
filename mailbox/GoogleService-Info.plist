@@ -9,7 +9,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.alfredmatthew.mailbox</string>
+	<string>co.alfma.voicebox</string>
 	<key>PROJECT_ID</key>
 	<string>mailbox-1ad0c</string>
 	<key>STORAGE_BUCKET</key>
@@ -25,6 +25,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:684110944682:ios:2814162d834bbb8a1973d3</string>
+	<string>1:684110944682:ios:bbc62931c6f35b9b1973d3</string>
+	<key>DATABASE_URL</key>
+	<string>https://mailbox-1ad0c-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>

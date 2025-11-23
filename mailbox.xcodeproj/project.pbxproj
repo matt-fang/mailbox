@@ -7,21 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		A5443ED82ED2CB5800E98C19 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EC62ED2CB5800E98C19 /* FirestoreManager.swift */; };
-		A5443ED92ED2CB5800E98C19 /* InboxViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EC72ED2CB5800E98C19 /* InboxViewModel.swift */; };
-		A5443EDA2ED2CB5800E98C19 /* OldInboxView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EC82ED2CB5800E98C19 /* OldInboxView.swift */; };
-		A5443EDB2ED2CB5800E98C19 /* RealtimeDatabaseManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EC92ED2CB5800E98C19 /* RealtimeDatabaseManager.swift */; };
 		A5443EDC2ED2CB5800E98C19 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECB2ED2CB5800E98C19 /* MessageListView.swift */; };
 		A5443EDD2ED2CB5800E98C19 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */; };
 		A5443EDE2ED2CB5800E98C19 /* MessageSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECD2ED2CB5800E98C19 /* MessageSignatureView.swift */; };
 		A5443EDF2ED2CB5800E98C19 /* AudioService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED02ED2CB5800E98C19 /* AudioService.swift */; };
 		A5443EE02ED2CB5800E98C19 /* mailboxApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED22ED2CB5800E98C19 /* mailboxApp.swift */; };
-		A5443EE12ED2CB5800E98C19 /* MessageListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED32ED2CB5800E98C19 /* MessageListViewModel.swift */; };
 		A5443EE22ED2CB5800E98C19 /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED42ED2CB5800E98C19 /* MessageService.swift */; };
 		A5443EE32ED2CB5800E98C19 /* PlaybackSlider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED52ED2CB5800E98C19 /* PlaybackSlider.swift */; };
 		A5443EE42ED2CB5800E98C19 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ED62ED2CB5800E98C19 /* User.swift */; };
 		A5443EE52ED2CB5800E98C19 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A5443ECF2ED2CB5800E98C19 /* Assets.xcassets */; };
-		A5443EE62ED2CB5800E98C19 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5443ED12ED2CB5800E98C19 /* GoogleService-Info.plist */; };
 		A5443EEB2ED2CE9500E98C19 /* OnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EEA2ED2CE9500E98C19 /* OnboardingView.swift */; };
 		A5443EEE2ED2E87100E98C19 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECB2ED2CB5800E98C19 /* MessageListView.swift */; };
 		A5443EEF2ED2E87100E98C19 /* MessageListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECB2ED2CB5800E98C19 /* MessageListView.swift */; };
@@ -34,6 +28,8 @@
 		A55091A82ED00D3A00A69FCD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A55091A72ED00D3A00A69FCD /* FirebaseDatabase */; };
 		A5F139CE2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
 		A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
+		A5F139D22ED3AD29000C227B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5F139D12ED3AD29000C227B /* GoogleService-Info.plist */; };
+		A5F139D42ED3AE1D000C227B /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = A5F139D32ED3AE1D000C227B /* FirebaseMessaging */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,18 +50,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		A5443EC62ED2CB5800E98C19 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
-		A5443EC72ED2CB5800E98C19 /* InboxViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InboxViewModel.swift; sourceTree = "<group>"; };
-		A5443EC82ED2CB5800E98C19 /* OldInboxView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OldInboxView.swift; sourceTree = "<group>"; };
-		A5443EC92ED2CB5800E98C19 /* RealtimeDatabaseManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealtimeDatabaseManager.swift; sourceTree = "<group>"; };
 		A5443ECB2ED2CB5800E98C19 /* MessageListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListView.swift; sourceTree = "<group>"; };
 		A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		A5443ECD2ED2CB5800E98C19 /* MessageSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignatureView.swift; sourceTree = "<group>"; };
 		A5443ECF2ED2CB5800E98C19 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		A5443ED02ED2CB5800E98C19 /* AudioService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioService.swift; sourceTree = "<group>"; };
-		A5443ED12ED2CB5800E98C19 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		A5443ED22ED2CB5800E98C19 /* mailboxApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = mailboxApp.swift; sourceTree = "<group>"; };
-		A5443ED32ED2CB5800E98C19 /* MessageListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageListViewModel.swift; sourceTree = "<group>"; };
 		A5443ED42ED2CB5800E98C19 /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
 		A5443ED52ED2CB5800E98C19 /* PlaybackSlider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaybackSlider.swift; sourceTree = "<group>"; };
 		A5443ED62ED2CB5800E98C19 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -75,6 +65,8 @@
 		A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "MailboxIcon 00-00-08-106.icon"; sourceTree = "<group>"; };
+		A5F139D02ED3ABF3000C227B /* mailbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mailbox.entitlements; sourceTree = "<group>"; };
+		A5F139D12ED3AD29000C227B /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -97,6 +89,7 @@
 			files = (
 				A55091A82ED00D3A00A69FCD /* FirebaseDatabase in Frameworks */,
 				A550919A2ECFEAAD00A69FCD /* FirebaseAnalytics in Frameworks */,
+				A5F139D42ED3AE1D000C227B /* FirebaseMessaging in Frameworks */,
 				A55091A02ECFEAAD00A69FCD /* FirebaseFirestore in Frameworks */,
 				A550919E2ECFEAAD00A69FCD /* FirebaseCore in Frameworks */,
 				A550919C2ECFEAAD00A69FCD /* FirebaseAuth in Frameworks */,
@@ -121,17 +114,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		A5443ECA2ED2CB5800E98C19 /* Old */ = {
-			isa = PBXGroup;
-			children = (
-				A5443EC62ED2CB5800E98C19 /* FirestoreManager.swift */,
-				A5443EC72ED2CB5800E98C19 /* InboxViewModel.swift */,
-				A5443EC82ED2CB5800E98C19 /* OldInboxView.swift */,
-				A5443EC92ED2CB5800E98C19 /* RealtimeDatabaseManager.swift */,
-			);
-			path = Old;
-			sourceTree = "<group>";
-		};
 		A5443ECE2ED2CB5800E98C19 /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -147,6 +129,7 @@
 		A5443ED72ED2CB5800E98C19 /* mailbox */ = {
 			isa = PBXGroup;
 			children = (
+				A5F139D02ED3ABF3000C227B /* mailbox.entitlements */,
 				A5443ED22ED2CB5800E98C19 /* mailboxApp.swift */,
 				A5443ECE2ED2CB5800E98C19 /* Views */,
 				A5443EE92ED2CB7B00E98C19 /* ViewModels */,
@@ -154,8 +137,7 @@
 				A5443EF62ED2E95B00E98C19 /* Styles */,
 				A5443EE72ED2CB6800E98C19 /* Services */,
 				A5443ECF2ED2CB5800E98C19 /* Assets.xcassets */,
-				A5443ED12ED2CB5800E98C19 /* GoogleService-Info.plist */,
-				A5443ECA2ED2CB5800E98C19 /* Old */,
+				A5F139D12ED3AD29000C227B /* GoogleService-Info.plist */,
 			);
 			path = mailbox;
 			sourceTree = "<group>";
@@ -180,7 +162,6 @@
 		A5443EE92ED2CB7B00E98C19 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
-				A5443ED32ED2CB5800E98C19 /* MessageListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -237,6 +218,7 @@
 				A550919F2ECFEAAD00A69FCD /* FirebaseFirestore */,
 				A55091A12ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta */,
 				A55091A72ED00D3A00A69FCD /* FirebaseDatabase */,
+				A5F139D32ED3AE1D000C227B /* FirebaseMessaging */,
 			);
 			productName = mailbox;
 			productReference = A5E1DB142ECFE27200D0B57D /* mailbox.app */;
@@ -340,8 +322,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A5F139D22ED3AD29000C227B /* GoogleService-Info.plist in Resources */,
 				A5443EE52ED2CB5800E98C19 /* Assets.xcassets in Resources */,
-				A5443EE62ED2CB5800E98C19 /* GoogleService-Info.plist in Resources */,
 				A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -368,17 +350,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5443ED82ED2CB5800E98C19 /* FirestoreManager.swift in Sources */,
-				A5443ED92ED2CB5800E98C19 /* InboxViewModel.swift in Sources */,
-				A5443EDA2ED2CB5800E98C19 /* OldInboxView.swift in Sources */,
-				A5443EDB2ED2CB5800E98C19 /* RealtimeDatabaseManager.swift in Sources */,
 				A5443EDC2ED2CB5800E98C19 /* MessageListView.swift in Sources */,
 				A5443EDD2ED2CB5800E98C19 /* MessageRowView.swift in Sources */,
 				A5443EDE2ED2CB5800E98C19 /* MessageSignatureView.swift in Sources */,
 				A5443EDF2ED2CB5800E98C19 /* AudioService.swift in Sources */,
 				A5443EF82ED2E97100E98C19 /* Color.swift in Sources */,
 				A5443EE02ED2CB5800E98C19 /* mailboxApp.swift in Sources */,
-				A5443EE12ED2CB5800E98C19 /* MessageListViewModel.swift in Sources */,
 				A5443EE22ED2CB5800E98C19 /* MessageService.swift in Sources */,
 				A5443EE32ED2CB5800E98C19 /* PlaybackSlider.swift in Sources */,
 				A5443EE42ED2CB5800E98C19 /* User.swift in Sources */,
@@ -540,14 +517,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = voicebox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -557,13 +536,13 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfredmatthew.mailbox;
+				PRODUCT_BUNDLE_IDENTIFIER = co.alfma.voicebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -585,14 +564,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = voicebox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphoneos*]" = YES;
 				"INFOPLIST_KEY_UIApplicationSceneManifest_Generation[sdk=iphonesimulator*]" = YES;
@@ -602,13 +583,13 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 17.6;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.6;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.alfredmatthew.mailbox;
+				PRODUCT_BUNDLE_IDENTIFIER = co.alfma.voicebox;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				REGISTER_APP_GROUPS = YES;
 				SDKROOT = auto;
@@ -808,6 +789,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A55091982ECFEAAD00A69FCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
+		};
+		A5F139D32ED3AE1D000C227B /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A55091982ECFEAAD00A69FCD /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

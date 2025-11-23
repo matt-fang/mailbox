@@ -56,7 +56,7 @@ struct MessageListView: View {
                 }
             }
         }
-        .navigationTitle("\(user.name)'s Mailbox")
+        .navigationTitle("\(user.name)'s Voicebox")
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
