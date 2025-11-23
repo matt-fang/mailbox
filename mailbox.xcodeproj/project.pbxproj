@@ -32,9 +32,8 @@
 		A55091A02ECFEAAD00A69FCD /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = A550919F2ECFEAAD00A69FCD /* FirebaseFirestore */; };
 		A55091A22ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta in Frameworks */ = {isa = PBXBuildFile; productRef = A55091A12ECFEAAD00A69FCD /* FirebaseInAppMessaging-Beta */; };
 		A55091A82ED00D3A00A69FCD /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A55091A72ED00D3A00A69FCD /* FirebaseDatabase */; };
-		A5F139C32ED2F681000C227B /* MailboxIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139C22ED2F681000C227B /* MailboxIcon.icon */; };
-		A5F139C52ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139C42ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon */; };
-		A5F139C62ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139C42ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon */; };
+		A5F139CE2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
+		A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,8 +74,7 @@
 		A5E1DB142ECFE27200D0B57D /* mailbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mailbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5F139C22ED2F681000C227B /* MailboxIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = MailboxIcon.icon; sourceTree = "<group>"; };
-		A5F139C42ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "MailboxIcon 00-00-08-106.icon"; sourceTree = "<group>"; };
+		A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "MailboxIcon 00-00-08-106.icon"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -202,14 +200,13 @@
 				A5E1DB242ECFE27400D0B57D /* mailboxTests */,
 				A5E1DB2E2ECFE27400D0B57D /* mailboxUITests */,
 				A5E1DB152ECFE27200D0B57D /* Products */,
-				A5F139C42ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon */,
+				A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */,
 			);
 			sourceTree = "<group>";
 		};
 		A5E1DB152ECFE27200D0B57D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5F139C22ED2F681000C227B /* MailboxIcon.icon */,
 				A5E1DB142ECFE27200D0B57D /* mailbox.app */,
 				A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */,
 				A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */,
@@ -343,10 +340,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F139C32ED2F681000C227B /* MailboxIcon.icon in Resources */,
 				A5443EE52ED2CB5800E98C19 /* Assets.xcassets in Resources */,
 				A5443EE62ED2CB5800E98C19 /* GoogleService-Info.plist in Resources */,
-				A5F139C62ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
+				A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,7 +350,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F139C52ED2F6A9000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
+				A5F139CE2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -541,7 +537,7 @@
 		A5E1DB362ECFE27400D0B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MailboxIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -586,7 +582,7 @@
 		A5E1DB372ECFE27400D0B57D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = MailboxIcon;
+				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_STYLE = Automatic;

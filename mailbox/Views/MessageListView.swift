@@ -44,7 +44,7 @@ struct MessageListView: View {
                 
             } else {
                 ScrollView {
-                    LazyVStack(spacing: 14) {
+                    LazyVStack(spacing: 22) {
                         ForEach(messageService.allMessages) { message in
                             MessageRowView(messageService: messageService, message: message)
                             Divider()

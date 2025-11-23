@@ -11,7 +11,7 @@ struct MessageRowView: View {
     @State var audioService: AudioService
     @State var messageService: MessageService
     
-    var message: Message
+    @State var message: Message
     var date: String
     var URL: String
     
@@ -57,7 +57,7 @@ struct MessageRowView: View {
                 message.isRead = true
                 
             } label: {
-                audioService.isPlaying ? Image(systemName: "pause.fill").imageScale(.medium) : Image(systemName: "play.fill").imageScale(.medium)
+                audioService.isPlaying ? Image(systemName: "pause.fill").font(.title2) : Image(systemName: "play.fill").font(.title2)
             }
             .frame(width: 20, height: 20)
             
