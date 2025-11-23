@@ -13,7 +13,7 @@ struct PlaybackSlider: View {
     var extraHeight: CGFloat
 
     @State private var lastStoredValue: CGFloat
-    @GestureState private var isActive: Bool = false
+    @GestureState var isActive: Bool = false
     
     init(audioService: AudioService) {
         self.audioService = audioService
@@ -47,11 +47,16 @@ struct PlaybackSlider: View {
                     out = true
                 }
                 .onChanged { newValue in
+                    audioService.gestureIsActive = true
+                    audioService.pause()
                     let progress = (newValue.translation.width / size.width) * range.upperBound + self.lastStoredValue
-                    value = max(min(progress, range.upperBound), range.lowerBound)
+                    let newTime = max(min(progress, range.upperBound), range.lowerBound)
+                    audioService.time = newTime  // ← FIX: Update audioService.time here!
                 }
                 .onEnded { _ in
                     audioService.sliderSeek(to: value)
+                    lastStoredValue = value  // ← FIX: Update lastStoredValue after seek
+                    audioService.gestureIsActive = false  // ← FIX: Reset gesture state
                 }
             )
             .frame(height: 5 + extraHeight)

@@ -19,7 +19,9 @@ final class AudioService {
     private var observer: Any?
     
     var time: CGFloat?
-
+    
+    var gestureIsActive: Bool? = false
+    
     func play(url: String) {
         guard let url = URL(string: url) else { return }
         let playerItem = AVPlayerItem(url: url)
@@ -30,12 +32,13 @@ final class AudioService {
         print("SET DURATION: \(duration)")
         
         player?.play()
+        
         startTimeListener()
         hasStarted = true
         isPlaying = true
-
+        
     }
-
+    
     func playPause() {
         if isPlaying {
             player?.pause()
@@ -46,25 +49,45 @@ final class AudioService {
         isPlaying.toggle()
     }
     
+    func pause() {
+        player?.pause()
+    }
+    
     func startTimeListener() {
-
-        if let ob = self.observer {
-            player?.removeTimeObserver(ob)
-        }
         
-        let interval = CMTime(value: 1, timescale: 2)
+        stopTimeListener()
+        
+        let interval = CMTime(seconds: 0.05, preferredTimescale: 600)
         
         self.observer = player?.addPeriodicTimeObserver(forInterval: interval, queue: .main) {
             [weak self] time in
-            self?.time = CGFloat(time.seconds)
+            
+            if self?.gestureIsActive == false {
+                self?.time = CGFloat(time.seconds)
+            }
+            
             print("NEW TIME: \(time)")
+            print("TIME SHOULD UPDATE? \(self?.gestureIsActive)")
+            print("TIME IS: \(self?.time)")
+        }
+    }
+    
+    func stopTimeListener() {
+        if let ob = self.observer {
+            player?.removeTimeObserver(ob)
         }
     }
     
     func sliderSeek(to time: CGFloat) {
-        player?.pause()
-        player?.seek(to: CMTime(seconds: Double(time), preferredTimescale: 600))
-        player?.play()
+        let newTime = CMTime(seconds: Double(time), preferredTimescale: 600)
+        player?.seek(to: newTime) { finished in
+            // Only resume playing after seek completes
+            if finished {
+                self.isPlaying.toggle()
+                self.playPause()
+            }
+        }
+        self.time = CGFloat(newTime.seconds)
     }
 }
 
