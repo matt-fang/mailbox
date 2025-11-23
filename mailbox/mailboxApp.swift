@@ -25,6 +25,8 @@ struct mailboxApp: App {
 
 class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNotificationCenterDelegate {
     
+    static var fcmToken: String?
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
         FirebaseApp.configure()
         print("configured firebase")
@@ -62,5 +64,8 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNot
         }
         
         print("Valid FCM token: \(token)")
+        
+        AppDelegate.fcmToken = token
+        UserDefaults.standard.set(token, forKey: "fcmToken")
     }
 }

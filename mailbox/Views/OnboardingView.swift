@@ -53,6 +53,13 @@ struct OnboardingView: View {
                 .buttonStyle(.bordered)
                 .padding()
                 .disabled(selectedName == "Select your name")
+                .simultaneousGesture(TapGesture().onEnded {
+                    UserDefaults.standard.set(selectedName, forKey: "userName")
+                        
+                    if let token = AppDelegate.fcmToken ?? UserDefaults.standard.string(forKey: "fcmToken") {
+                        MessageService.saveFCMToken(userName: selectedName, token: token) // MARK: STATIC METHODS LET US ORGANIZE FUNCTIONS IN CLASSES WITHOUT NEEDING TO INIT AN INSTANCE! (great for semantic organization)
+                    }
+                })
         }
         
     }

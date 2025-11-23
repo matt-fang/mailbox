@@ -32,6 +32,12 @@ final class MessageService {
         self.allMessagesRef = Database.database().reference().child("users/\(user.friendName)/allMessages")
     }
     
+    static func saveFCMToken(userName: String, token: String) {
+        Database.database().reference()
+            .child("users/\(userName)/fcmToken")
+            .setValue(token)
+    }
+    
     func startListening(for type: ListenerType) {
         
         ref = type == .latest ? latestRef : allMessagesRef
