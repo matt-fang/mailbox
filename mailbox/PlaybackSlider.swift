@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PlaybackSlider: View {
-    @State var audioService: AudioService
+    @Bindable var audioService: AudioService
     var range: ClosedRange<CGFloat>
     var extraHeight: CGFloat
 
@@ -59,7 +59,7 @@ struct PlaybackSlider: View {
                     audioService.gestureIsActive = false  // ← FIX: Reset gesture state
                 }
             )
-            .frame(height: 5 + extraHeight)
+            .frame(height: 10 + extraHeight)
             .mask {
                 RoundedRectangle(cornerRadius: .infinity)
                     .frame(height: isActive ? 5 + extraHeight : 5)

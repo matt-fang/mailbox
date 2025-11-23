@@ -8,6 +8,7 @@
 import Foundation
 import AVFoundation
 import Observation
+import SwiftUI
 
 @Observable
 final class AudioService {
@@ -23,6 +24,7 @@ final class AudioService {
     var gestureIsActive: Bool? = false
     
     func play(url: String) {
+        print("CALLED PLAY")
         guard let url = URL(string: url) else { return }
         let playerItem = AVPlayerItem(url: url)
         
@@ -34,12 +36,14 @@ final class AudioService {
         player?.play()
         
         startTimeListener()
+        
         hasStarted = true
         isPlaying = true
         
     }
     
     func playPause() {
+        print("CALLED PLAYPAUSE")
         if isPlaying {
             player?.pause()
         } else {
@@ -66,9 +70,9 @@ final class AudioService {
                 self?.time = CGFloat(time.seconds)
             }
             
-            print("NEW TIME: \(time)")
-            print("TIME SHOULD UPDATE? \(self?.gestureIsActive)")
-            print("TIME IS: \(self?.time)")
+//            print("NEW TIME: \(time)")
+//            print("TIME SHOULD UPDATE? \(self?.gestureIsActive)")
+//            print("TIME IS: \(self?.time)")
         }
     }
     
