@@ -68,4 +68,12 @@ class AppDelegate: NSObject, UIApplicationDelegate, MessagingDelegate, UNUserNot
         AppDelegate.fcmToken = token
         UserDefaults.standard.set(token, forKey: "fcmToken")
     }
+    
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                               willPresent notification: UNNotification,
+                               withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        // show notif even in foreground?
+        completionHandler([[.banner, .sound]])
+    }
+    
 }
