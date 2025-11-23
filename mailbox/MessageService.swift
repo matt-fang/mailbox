@@ -18,7 +18,7 @@ final class MessageService {
     var latestMessage: String = ""
     var latestRef: DatabaseReference! = Database.database().reference().child("users/Matthew/latestMessage")
 
-    var allMessageURLs: [String] = []
+    var allMessages: [Message] = []
     var allMessagesRef: DatabaseReference! = Database.database().reference().child("users/Matthew/allMessages")
     
     var ref: DatabaseReference!
@@ -26,6 +26,8 @@ final class MessageService {
     func startListening(for type: ListenerType) {
         
         ref = type == .latest ? latestRef : allMessagesRef
+        let URLRef = ref.child("URL")
+        let isReadRef = ref.child("isRead")
         
         if type == .latest {
             messageHandle = ref.observe(.value) { snapshot in
@@ -36,16 +38,19 @@ final class MessageService {
             }
         }
         else if type == .all {
+            
             messageHandle = ref.observe(.value) { snapshot in
-                self.allMessageURLs.removeAll()
+                var messages: [Message] = []
                 for child in snapshot.children {
                     if let childSnapshot = child as? DataSnapshot,
-                       let data = childSnapshot.value as? String {
-                        print("new data! \(data)")
-                        self.allMessageURLs.append(data)
+                       let messageData = childSnapshot.value as? [String: Any],
+                       let urlData = messageData["URL"] as? String,
+                       let isReadData = messageData["isRead"] as? Bool
+                    {
+                        messages.append(Message(date: childSnapshot.key, URL: urlData, isRead: isReadData))
                     }
                 }
-                self.allMessageURLs.reverse()
+                self.allMessages = messages.sorted(by: >)
             }
         }
     }
@@ -55,8 +60,41 @@ final class MessageService {
         ref.removeObserver(withHandle: handle)
     }
     
+    func markIsRead(for key: String) {
+        ref = self.allMessagesRef.child(key).child("isRead")
+        ref.setValue(true)
+    }
+    
+    func getIsRead(for key: String) {
+        ref = self.allMessagesRef.child(key).child("isRead")
+        ref.setValue(true)
+        return
+    }
+    
     enum ListenerType {
         case latest
         case all
+    }
+}
+
+class Message: Identifiable, Comparable, Equatable {
+    var date: String
+    var URL: String
+    var isRead: Bool
+    
+    var id: String { date }
+    
+    init(date: String, URL: String, isRead: Bool) {
+        self.date = date
+        self.URL = URL
+        self.isRead = isRead
+    }
+    
+    static func < (lhs: Message, rhs: Message) -> Bool {
+        lhs.date < rhs.date
+    }
+    
+    static func == (lhs: Message, rhs: Message) -> Bool {
+        lhs.date == rhs.date
     }
 }

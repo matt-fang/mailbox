@@ -24,8 +24,9 @@ final class AudioService {
     var gestureIsActive: Bool? = false
     
     func play(url: String) {
-        print("CALLED PLAY")
+        // MARK: AVPlayer will NOT play http urls!
         guard let url = URL(string: url) else { return }
+        
         let playerItem = AVPlayerItem(url: url)
         
         player = AVPlayer(playerItem: playerItem)
@@ -68,6 +69,13 @@ final class AudioService {
             
             if self?.gestureIsActive == false {
                 self?.time = CGFloat(time.seconds)
+                
+                if CGFloat(time.seconds) >= self?.duration ?? .infinity {
+                    self?.time = CGFloat(0.0)
+                    self?.player?.seek(to: .zero)
+                    self?.pause()
+                    self?.isPlaying = false
+                }
             }
             
 //            print("NEW TIME: \(time)")

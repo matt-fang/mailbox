@@ -17,8 +17,8 @@ struct MessageListView: View {
         NavigationStack {
             ScrollView {
                 LazyVStack(spacing: 14) {
-                    ForEach(messageService.allMessageURLs, id: \.self) { messageURL in
-                        MessageRowView(timestamp: "Nov 21", title: "hi", URL: "https://commondatastorage.googleapis.com/codeskulptor-demos/DDR_assets/Kangaroo_MusiQue_-_The_Neverwritten_Role_Playing_Game.mp3")
+                    ForEach(messageService.allMessages) { message in
+                        MessageRowView(messageService: messageService, message: message)
                         Divider()
                         .gridCellUnsizedAxes(.horizontal)
                     }
@@ -38,21 +38,38 @@ struct MessageListView: View {
 }
 
 struct MessageRowView: View {
-    @State var audioService = AudioService()
+    @State var audioService: AudioService
+    @State var messageService: MessageService
     
-    var timestamp: String
-    var title: String
+    var message: Message
+    var date: String
     var URL: String
+    
+    init(messageService: MessageService, message: Message) {
+        self.audioService = AudioService()
+        self.messageService = messageService
+        
+        self.message = message
+        self.date = message.date
+        self.URL = message.URL
+        print("URL IS \(self.URL)")
+    }
     
     var body: some View {
         HStack(alignment: .center) {
             
+            if message.isRead == false {
+                Circle()
+                    .frame(width: 10, height: 10)
+                    .foregroundStyle(.blue)
+            }
+                
             ZStack {
                 if audioService.isPlaying {
                     PlaybackSlider(audioService: audioService)
                         .transition(.blurReplace)
                 } else {
-                    Text(title)
+                    Text(date)
                         .transition(.blurReplace)
                 }
             }
@@ -63,9 +80,11 @@ struct MessageRowView: View {
             Spacer()
             
             Button {
-                print("BEFORE: hasStarted = \(audioService.hasStarted)")
-                audioService.hasStarted ? audioService.playPause() : audioService.play(url: URL)
-                print("AFTER: hasStarted = \(audioService.hasStarted)")
+                audioService.hasStarted ? audioService.playPause() : audioService.play(url: self.URL)
+                
+                messageService.markIsRead(for: message.date)
+                message.isRead = true
+                
             } label: {
                 audioService.isPlaying ? Image(systemName: "pause.fill").imageScale(.medium) : Image(systemName: "play.fill").imageScale(.medium)
             }
