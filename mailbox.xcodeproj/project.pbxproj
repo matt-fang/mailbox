@@ -10,6 +10,7 @@
 		A506945E2F3FB97000323E40 /* AudioRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506945D2F3FB97000323E40 /* AudioRoomService.swift */; };
 		A50694632F3FBC2C00323E40 /* StreamVideo in Frameworks */ = {isa = PBXBuildFile; productRef = A50694622F3FBC2C00323E40 /* StreamVideo */; };
 		A50694652F3FBC2C00323E40 /* StreamVideoSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A50694642F3FBC2C00323E40 /* StreamVideoSwiftUI */; };
+		A50694672F3FC2CC00323E40 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50694662F3FC2CC00323E40 /* ActivityService.swift */; };
 		A5443EDC2ED2CB5800E98C19 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECB2ED2CB5800E98C19 /* CallView.swift */; };
 		A5443EDD2ED2CB5800E98C19 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */; };
 		A5443EDE2ED2CB5800E98C19 /* MessageSignatureView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECD2ED2CB5800E98C19 /* MessageSignatureView.swift */; };
@@ -52,6 +53,7 @@
 /* Begin PBXFileReference section */
 		A506945D2F3FB97000323E40 /* AudioRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRoomService.swift; sourceTree = "<group>"; };
 		A50694602F3FBB8F00323E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		A50694662F3FC2CC00323E40 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		A5443ECB2ED2CB5800E98C19 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
 		A5443ECD2ED2CB5800E98C19 /* MessageSignatureView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageSignatureView.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 			children = (
 				A5443ED02ED2CB5800E98C19 /* AudioService.swift */,
 				A5443ED42ED2CB5800E98C19 /* MessageService.swift */,
+				A50694662F3FC2CC00323E40 /* ActivityService.swift */,
 				A506945D2F3FB97000323E40 /* AudioRoomService.swift */,
 			);
 			path = Services;
@@ -363,6 +366,7 @@
 				A5443EE22ED2CB5800E98C19 /* MessageService.swift in Sources */,
 				A5443EE32ED2CB5800E98C19 /* PlaybackSlider.swift in Sources */,
 				A5443EE42ED2CB5800E98C19 /* TalkboxUser.swift in Sources */,
+				A50694672F3FC2CC00323E40 /* ActivityService.swift in Sources */,
 				A5443EEB2ED2CE9500E98C19 /* OnboardingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
