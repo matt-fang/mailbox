@@ -10,10 +10,13 @@ import SwiftUI
 struct OnboardingView: View {
     @Environment(\.colorScheme) var colorScheme
     
-    @State private var selectedName: String = "Select your name"
-    var nameOptions: [String] = ["Matthew", "Alfred"]
-    var friendPairs: [String: String] = ["Matthew" : "Alfred",
-                                         "Alfred" : "Matthew",
+    @State private var selectedName: String = "My name is"
+    
+    var nameOptions: [String] = ["Matthew", "Atharva", "Noa", "Alfred", "Devon", "Hayden"]
+    var friendPairs: [String: String] = ["Matthew" : "Atharva",
+                                         "Atharva" : "Matthew",
+                                         "Noa" : "Alfred",
+                                         "Alfred" : "Noa",
                                          "Devon" : "Hayden",
                                          "Hayden" : "Devon"]
     
@@ -24,25 +27,24 @@ struct OnboardingView: View {
                 Image(colorScheme == .light ? "lighticon" : "darkicon")
                     .resizable()
                     .frame(width: 200, height: 200)
-                VStack {
-                    Text("Welcome to Voicebox")
+                VStack(spacing: 8) {
+                    Text("Welcome to Voicebox,")
                         .font(.system(size: 32, weight: .semibold))
                     
-                    Picker("Name", selection: $selectedName) {
-                        Text("My name is").tag("Select your name")
+                    Picker("Select your name", selection: $selectedName) {
+                        Text("My name is").tag("My name is")
                         ForEach(nameOptions, id: \.self) { option in
                             Text(option).tag(option)
                         }
                     }
                     .pickerStyle(.automatic)
-                    .padding(.top, -10)
                 }
                 .padding(.top, 20)
                 
                 Spacer()
                 
                 NavigationLink {
-                    MessageListView(user: User(name: selectedName, friendName: friendPairs[selectedName] ?? "test"))
+                    CallView(user: TalkboxUser(realName: selectedName, name: selectedName, friendName: friendPairs[selectedName] ?? "test"))
                 } label: {
                     Text("Continue")
                         .fontWeight(.medium)
@@ -52,7 +54,7 @@ struct OnboardingView: View {
                 .tint(.accentColor)
                 .buttonStyle(.bordered)
                 .padding()
-                .disabled(selectedName == "Select your name")
+                .disabled(selectedName == "My name is")
                 .simultaneousGesture(TapGesture().onEnded {
                     UserDefaults.standard.set(selectedName, forKey: "userName")
                         

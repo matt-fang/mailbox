@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct MessageSignatureView: View {
-    @State var user: User
+    @State var user: TalkboxUser
     
     var body: some View {
         VStack {
@@ -21,5 +21,5 @@ struct MessageSignatureView: View {
 }
 
 #Preview {
-    MessageSignatureView(user: User(name: "Alfred", friendName: "Matthew"))
+    MessageSignatureView(user: TalkboxUser(realName: "Alfred", name: "Alfred", friendName: "Matthew"))
 }

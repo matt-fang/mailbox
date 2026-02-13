@@ -12,7 +12,7 @@ import FirebaseDatabase
 
 @Observable
 final class MessageService {
-    var user: User
+    var user: TalkboxUser
     var messageHandle: DatabaseHandle?
     
     // MARK: 'CHILDREN' ARE JUST KEYS - ITEMS IN A NESTED LIST
@@ -24,7 +24,7 @@ final class MessageService {
     
     var ref: DatabaseReference!
     
-    init(user: User) {
+    init(user: TalkboxUser) {
         self.user = user
         self.latestMessage = ""
         self.latestRef = Database.database().reference().child("users/\(user.friendName)/latestMessage")

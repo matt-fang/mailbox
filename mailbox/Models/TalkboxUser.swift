@@ -9,11 +9,13 @@ import Foundation
 import Observation
 
 @Observable
-class User {
+class TalkboxUser {
+    var realName: String
     var name: String
     var friendName: String
     
-    init(name: String, friendName: String) {
+    init(realName: String, name: String, friendName: String) {
+        self.realName = realName
         self.name = name
         self.friendName = friendName
     }
