@@ -20,7 +20,7 @@ class AudioRoomService {
     let token: String
 
     private let apiKey: String = "6yks7w9qurxz"
-    private let callId: String = "kk1gLiCOzwYDUhMq98Oqk"
+    private let callId: String = "talkbox-room"
 
     // MARK: - Activity
 
@@ -68,7 +68,7 @@ class AudioRoomService {
     // MARK: - Private
 
     private var client: StreamVideo?
-    private var call: Call?
+    private(set) var call: Call?
     private var observationTask: Task<Void, Never>?
     private var isConnecting: Bool = false
 
@@ -128,11 +128,7 @@ class AudioRoomService {
 
         guard isConnected, let call = call else { return }
 
-        do {
-            try await call.leave()
-        } catch {
-            self.error = error.localizedDescription
-        }
+        call.leave()
 
         self.call = nil
         self.client = nil

@@ -7,13 +7,13 @@
 
 import SwiftUI
 internal import CoreMedia
+import StreamVideo
 
 struct CallView: View {
     @Environment(\.dismiss) var dismiss
     @Environment(\.colorScheme) var colorScheme
     
     @State var user: TalkboxUser
-    @State var isPlaying: Bool = false
     var autoConnect: Bool = false
     var audioRoomService: AudioRoomService
     
@@ -22,15 +22,23 @@ struct CallView: View {
             Button {
                 print("join call button")
                 Task {
-                    await isPlaying ? audioRoomService.disconnect() : audioRoomService.connect()
+                    await audioRoomService.isConnected ? audioRoomService.disconnect() : audioRoomService.connect()
                 }
-                isPlaying.toggle()
+                
             } label: {
-                Image(systemName: isPlaying ? "pause.fill" : "play.fill")
+                Image(systemName: audioRoomService.isConnected ? "pause.fill" : "play.fill")
                     .font(.system(size: 200))
             }
+            
+            
+            if audioRoomService.isConnected,
+               let callId = audioRoomService.call?.callId,
+               let participantCount = audioRoomService.call?.state.participantCount {
+                Text("audio room \(callId) has \(participantCount) participants")
+            }
+            
         }
-        .navigationTitle("\(user.realName)'s Voicebox")
+        .navigationTitle("\(user.realName)'s Talkbox")
         .navigationBarTitleDisplayMode(.large)
         .toolbar {
             ToolbarItem(placement: .topBarTrailing) {
@@ -43,11 +51,10 @@ struct CallView: View {
         }
         .navigationBarBackButtonHidden()
         .onAppear {
-            if autoConnect && !isPlaying {
+            if autoConnect && !audioRoomService.isConnected {
                 Task {
                     await audioRoomService.connect()
                 }
-                isPlaying = true
             }
         }
     }

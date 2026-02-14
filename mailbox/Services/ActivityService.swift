@@ -12,7 +12,7 @@ final class ActivityService {
     private let ref: DatabaseReference
 
     init(userId: String) {
-        self.ref = Database.database().reference().child("\(userId)/isActive")
+        self.ref = Database.database().reference().child("\(userId.lowercased())/isActive")
     }
 
     func setActive(_ active: Bool) {

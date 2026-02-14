@@ -134,7 +134,6 @@
 				A5F139D02ED3ABF3000C227B /* mailbox.entitlements */,
 				A5443ED22ED2CB5800E98C19 /* mailboxApp.swift */,
 				A5443ECE2ED2CB5800E98C19 /* Views */,
-				A5443EE92ED2CB7B00E98C19 /* ViewModels */,
 				A5443EE82ED2CB7600E98C19 /* Models */,
 				A5443EF62ED2E95B00E98C19 /* Styles */,
 				A5443EE72ED2CB6800E98C19 /* Services */,
@@ -161,13 +160,6 @@
 				A5443ED62ED2CB5800E98C19 /* TalkboxUser.swift */,
 			);
 			path = Models;
-			sourceTree = "<group>";
-		};
-		A5443EE92ED2CB7B00E98C19 /* ViewModels */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = ViewModels;
 			sourceTree = "<group>";
 		};
 		A5443EF62ED2E95B00E98C19 /* Styles */ = {
