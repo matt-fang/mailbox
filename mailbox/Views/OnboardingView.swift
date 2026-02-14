@@ -28,7 +28,7 @@ struct OnboardingView: View {
                     .resizable()
                     .frame(width: 200, height: 200)
                 VStack(spacing: 8) {
-                    Text("Welcome to Voicebox,")
+                    Text("Welcome to Talkbox,")
                         .font(.system(size: 32, weight: .semibold))
                     
                     Picker("Select your name", selection: $selectedName) {
