@@ -13,11 +13,30 @@ import UserNotifications
 @main
 struct mailboxApp: App {
     @UIApplicationDelegateAdaptor(AppDelegate.self) var delegate
-    
+    @State private var deepLinkToCall = false
+
+    private var friendPairs: [String: String] {
+        ["Matthew": "Atharva", "Atharva": "Matthew",
+         "Noa": "Alfred", "Alfred": "Noa",
+         "Devon": "Hayden", "Hayden": "Devon"]
+    }
+
     var body: some Scene {
         WindowGroup {
             NavigationStack {
                 OnboardingView()
+                    .navigationDestination(isPresented: $deepLinkToCall) {
+                        let name = UserDefaults.standard.string(forKey: "userName") ?? "Matthew"
+                        CallView(
+                            user: TalkboxUser(realName: name, name: name, friendName: friendPairs[name] ?? "test"),
+                            autoConnect: true,
+                            audioRoomService: AudioRoomService(userName: name)
+                        )
+                    }
+            }
+            .onOpenURL { url in
+                // Any link from www.talkbox.design opens the call
+                deepLinkToCall = true
             }
         }
     }

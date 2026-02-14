@@ -9,17 +9,54 @@ import Foundation
 import Observation
 import StreamVideo
 internal import Combine
+import CryptoKit
 
 @Observable
 class AudioRoomService {
 
     // MARK: - Configuration
 
-    var userId: String = "2"
-    var token: String = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiMiJ9.jr0NBXqo_MIaqzV4K-MfONAZGKsUo9hZzfnrhxA4zdU"
+    let userId: String
+    let token: String
 
     private let apiKey: String = "6yks7w9qurxz"
     private let callId: String = "kk1gLiCOzwYDUhMq98Oqk"
+
+    // MARK: - Activity
+
+    private let activityService: ActivityService
+
+    private static let streamSecret = "7yfxatadshbrtpgg9ttmgpnqenu4j6n956rj278vv6afkk4ebf69jhanuetu3vdm"
+
+    // MARK: - Init
+
+    init(userName: String) {
+        self.userId = userName
+        self.token = Self.generateToken(for: userName)
+        self.activityService = ActivityService(userId: userName)
+    }
+
+    private static func generateToken(for userId: String) -> String {
+        func base64url(_ data: Data) -> String {
+            data.base64EncodedString()
+                .replacingOccurrences(of: "+", with: "-")
+                .replacingOccurrences(of: "/", with: "_")
+                .replacingOccurrences(of: "=", with: "")
+        }
+
+        let header = #"{"alg":"HS256","typ":"JWT"}"#
+        let payload = #"{"user_id":"\#(userId)"}"#
+
+        let headerB64 = base64url(Data(header.utf8))
+        let payloadB64 = base64url(Data(payload.utf8))
+        let message = "\(headerB64).\(payloadB64)"
+
+        let key = SymmetricKey(data: Data(streamSecret.utf8))
+        let signature = HMAC<SHA256>.authenticationCode(for: Data(message.utf8), using: key)
+        let signatureB64 = base64url(Data(signature))
+
+        return "\(message).\(signatureB64)"
+    }
 
     // MARK: - State
 
@@ -73,6 +110,7 @@ class AudioRoomService {
             isConnected = true
             isLive = true
             error = nil
+            activityService.setActive(true)
 
             // Observe call state changes
             observationTask = Task { await observeCallState(call) }
@@ -101,6 +139,7 @@ class AudioRoomService {
         isConnected = false
         isLive = false
         participantCount = 0
+        activityService.setActive(false)
     }
 
     // MARK: - Private

@@ -6,9 +6,16 @@
 //
 
 import Foundation
-import FirebaseCore
 import FirebaseDatabase
 
 final class ActivityService {
-    var user: TalkboxUser
+    private let ref: DatabaseReference
+
+    init(userId: String) {
+        self.ref = Database.database().reference().child("\(userId)/isActive")
+    }
+
+    func setActive(_ active: Bool) {
+        ref.setValue(active)
+    }
 }

@@ -14,7 +14,8 @@ struct CallView: View {
     
     @State var user: TalkboxUser
     @State var isPlaying: Bool = false
-    var audioRoomService: AudioRoomService = AudioRoomService()
+    var autoConnect: Bool = false
+    var audioRoomService: AudioRoomService
     
     var body: some View {
         VStack {
@@ -41,9 +42,17 @@ struct CallView: View {
             }
         }
         .navigationBarBackButtonHidden()
+        .onAppear {
+            if autoConnect && !isPlaying {
+                Task {
+                    await audioRoomService.connect()
+                }
+                isPlaying = true
+            }
+        }
     }
 }
 
 #Preview {
-    CallView(user: TalkboxUser(realName: "Matthew", name: "Matthew", friendName: "Alfred"))
+    CallView(user: TalkboxUser(realName: "Matthew", name: "Matthew", friendName: "Alfred"), audioRoomService: AudioRoomService(userName: "Matthew"))
 }

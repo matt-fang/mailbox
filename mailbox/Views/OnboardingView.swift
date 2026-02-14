@@ -44,7 +44,7 @@ struct OnboardingView: View {
                 Spacer()
                 
                 NavigationLink {
-                    CallView(user: TalkboxUser(realName: selectedName, name: selectedName, friendName: friendPairs[selectedName] ?? "test"))
+                    CallView(user: TalkboxUser(realName: selectedName, name: selectedName, friendName: friendPairs[selectedName] ?? "test"), audioRoomService: AudioRoomService(userName: selectedName))
                 } label: {
                     Text("Continue")
                         .fontWeight(.medium)

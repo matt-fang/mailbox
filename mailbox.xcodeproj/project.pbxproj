@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		A506945E2F3FB97000323E40 /* AudioRoomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A506945D2F3FB97000323E40 /* AudioRoomService.swift */; };
 		A50694632F3FBC2C00323E40 /* StreamVideo in Frameworks */ = {isa = PBXBuildFile; productRef = A50694622F3FBC2C00323E40 /* StreamVideo */; };
-		A50694652F3FBC2C00323E40 /* StreamVideoSwiftUI in Frameworks */ = {isa = PBXBuildFile; productRef = A50694642F3FBC2C00323E40 /* StreamVideoSwiftUI */; };
 		A50694672F3FC2CC00323E40 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = A50694662F3FC2CC00323E40 /* ActivityService.swift */; };
 		A5443EDC2ED2CB5800E98C19 /* CallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECB2ED2CB5800E98C19 /* CallView.swift */; };
 		A5443EDD2ED2CB5800E98C19 /* MessageRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */; };
@@ -91,7 +90,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A50694652F3FBC2C00323E40 /* StreamVideoSwiftUI in Frameworks */,
 				A5F139DD2ED3CA37000C227B /* FirebaseMessaging in Frameworks */,
 				A5F139DB2ED3CA37000C227B /* FirebaseDatabase in Frameworks */,
 				A50694632F3FBC2C00323E40 /* StreamVideo in Frameworks */,
@@ -223,7 +221,6 @@
 				A5F139DA2ED3CA37000C227B /* FirebaseDatabase */,
 				A5F139DC2ED3CA37000C227B /* FirebaseMessaging */,
 				A50694622F3FBC2C00323E40 /* StreamVideo */,
-				A50694642F3FBC2C00323E40 /* StreamVideoSwiftUI */,
 			);
 			productName = mailbox;
 			productReference = A5E1DB142ECFE27200D0B57D /* mailbox.app */;
@@ -527,7 +524,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -576,7 +573,7 @@
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 6;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -784,11 +781,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = A50694612F3FBC2C00323E40 /* XCRemoteSwiftPackageReference "stream-video-swift" */;
 			productName = StreamVideo;
-		};
-		A50694642F3FBC2C00323E40 /* StreamVideoSwiftUI */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = A50694612F3FBC2C00323E40 /* XCRemoteSwiftPackageReference "stream-video-swift" */;
-			productName = StreamVideoSwiftUI;
 		};
 		A5F139D62ED3CA37000C227B /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
