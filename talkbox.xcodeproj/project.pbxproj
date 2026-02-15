@@ -25,8 +25,8 @@
 		A5443EF82ED2E97100E98C19 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5443EF72ED2E97100E98C19 /* Color.swift */; };
 		A5A8DB4F2F4056D600F3E61E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5A8DB4E2F4056D600F3E61E /* GoogleService-Info.plist */; };
 		A5A8DB502F4056D600F3E61E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A5A8DB4E2F4056D600F3E61E /* GoogleService-Info.plist */; };
-		A5F139CE2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
-		A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */; };
+		A5D07DA12F428BE000041AB8 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5D07DA02F428BE000041AB8 /* AppIcon.icon */; };
+		A5D07DA22F428BE000041AB8 /* AppIcon.icon in Resources */ = {isa = PBXBuildFile; fileRef = A5D07DA02F428BE000041AB8 /* AppIcon.icon */; };
 		A5F139D72ED3CA37000C227B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = A5F139D62ED3CA37000C227B /* FirebaseAnalytics */; };
 		A5F139D92ED3CA37000C227B /* FirebaseCore in Frameworks */ = {isa = PBXBuildFile; productRef = A5F139D82ED3CA37000C227B /* FirebaseCore */; };
 		A5F139DB2ED3CA37000C227B /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = A5F139DA2ED3CA37000C227B /* FirebaseDatabase */; };
@@ -52,7 +52,6 @@
 
 /* Begin PBXFileReference section */
 		A506945D2F3FB97000323E40 /* AudioRoomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioRoomService.swift; sourceTree = "<group>"; };
-		A50694602F3FBB8F00323E40 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		A50694662F3FC2CC00323E40 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		A5443ECB2ED2CB5800E98C19 /* CallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallView.swift; sourceTree = "<group>"; };
 		A5443ECC2ED2CB5800E98C19 /* MessageRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageRowView.swift; sourceTree = "<group>"; };
@@ -66,10 +65,10 @@
 		A5443EEA2ED2CE9500E98C19 /* OnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingView.swift; sourceTree = "<group>"; };
 		A5443EF72ED2E97100E98C19 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		A5A8DB4E2F4056D600F3E61E /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		A5E1DB142ECFE27200D0B57D /* mailbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = mailbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = mailboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = "MailboxIcon 00-00-08-106.icon"; sourceTree = "<group>"; };
+		A5D07DA02F428BE000041AB8 /* AppIcon.icon */ = {isa = PBXFileReference; lastKnownFileType = folder.iconcomposer.icon; path = AppIcon.icon; sourceTree = "<group>"; };
+		A5E1DB142ECFE27200D0B57D /* talkbox.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = talkbox.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E1DB212ECFE27400D0B57D /* talkboxTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talkboxTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A5E1DB2B2ECFE27400D0B57D /* talkboxUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = talkboxUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A5F139D02ED3ABF3000C227B /* mailbox.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = mailbox.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -131,7 +130,6 @@
 		A5443ED72ED2CB5800E98C19 /* mailbox */ = {
 			isa = PBXGroup;
 			children = (
-				A50694602F3FBB8F00323E40 /* Info.plist */,
 				A5F139D02ED3ABF3000C227B /* mailbox.entitlements */,
 				A5443ED22ED2CB5800E98C19 /* mailboxApp.swift */,
 				A5443ECE2ED2CB5800E98C19 /* Views */,
@@ -178,16 +176,16 @@
 				A5E1DB242ECFE27400D0B57D /* mailboxTests */,
 				A5E1DB2E2ECFE27400D0B57D /* mailboxUITests */,
 				A5E1DB152ECFE27200D0B57D /* Products */,
-				A5F139CD2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon */,
+				A5D07DA02F428BE000041AB8 /* AppIcon.icon */,
 			);
 			sourceTree = "<group>";
 		};
 		A5E1DB152ECFE27200D0B57D /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				A5E1DB142ECFE27200D0B57D /* mailbox.app */,
-				A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */,
-				A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */,
+				A5E1DB142ECFE27200D0B57D /* talkbox.app */,
+				A5E1DB212ECFE27400D0B57D /* talkboxTests.xctest */,
+				A5E1DB2B2ECFE27400D0B57D /* talkboxUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -195,9 +193,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		A5E1DB132ECFE27200D0B57D /* mailbox */ = {
+		A5E1DB132ECFE27200D0B57D /* talkbox */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5E1DB352ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailbox" */;
+			buildConfigurationList = A5E1DB352ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkbox" */;
 			buildPhases = (
 				A5E1DB102ECFE27200D0B57D /* Sources */,
 				A5E1DB112ECFE27200D0B57D /* Frameworks */,
@@ -207,7 +205,7 @@
 			);
 			dependencies = (
 			);
-			name = mailbox;
+			name = talkbox;
 			packageProductDependencies = (
 				A5F139D62ED3CA37000C227B /* FirebaseAnalytics */,
 				A5F139D82ED3CA37000C227B /* FirebaseCore */,
@@ -216,12 +214,12 @@
 				A50694622F3FBC2C00323E40 /* StreamVideo */,
 			);
 			productName = mailbox;
-			productReference = A5E1DB142ECFE27200D0B57D /* mailbox.app */;
+			productReference = A5E1DB142ECFE27200D0B57D /* talkbox.app */;
 			productType = "com.apple.product-type.application";
 		};
-		A5E1DB202ECFE27400D0B57D /* mailboxTests */ = {
+		A5E1DB202ECFE27400D0B57D /* talkboxTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5E1DB382ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailboxTests" */;
+			buildConfigurationList = A5E1DB382ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkboxTests" */;
 			buildPhases = (
 				A5E1DB1D2ECFE27400D0B57D /* Sources */,
 				A5E1DB1E2ECFE27400D0B57D /* Frameworks */,
@@ -235,16 +233,16 @@
 			fileSystemSynchronizedGroups = (
 				A5E1DB242ECFE27400D0B57D /* mailboxTests */,
 			);
-			name = mailboxTests;
+			name = talkboxTests;
 			packageProductDependencies = (
 			);
 			productName = mailboxTests;
-			productReference = A5E1DB212ECFE27400D0B57D /* mailboxTests.xctest */;
+			productReference = A5E1DB212ECFE27400D0B57D /* talkboxTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		A5E1DB2A2ECFE27400D0B57D /* mailboxUITests */ = {
+		A5E1DB2A2ECFE27400D0B57D /* talkboxUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A5E1DB3B2ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailboxUITests" */;
+			buildConfigurationList = A5E1DB3B2ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkboxUITests" */;
 			buildPhases = (
 				A5E1DB272ECFE27400D0B57D /* Sources */,
 				A5E1DB282ECFE27400D0B57D /* Frameworks */,
@@ -258,11 +256,11 @@
 			fileSystemSynchronizedGroups = (
 				A5E1DB2E2ECFE27400D0B57D /* mailboxUITests */,
 			);
-			name = mailboxUITests;
+			name = talkboxUITests;
 			packageProductDependencies = (
 			);
 			productName = mailboxUITests;
-			productReference = A5E1DB2B2ECFE27400D0B57D /* mailboxUITests.xctest */;
+			productReference = A5E1DB2B2ECFE27400D0B57D /* talkboxUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -288,7 +286,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A5E1DB0F2ECFE27200D0B57D /* Build configuration list for PBXProject "mailbox" */;
+			buildConfigurationList = A5E1DB0F2ECFE27200D0B57D /* Build configuration list for PBXProject "talkbox" */;
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -306,9 +304,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				A5E1DB132ECFE27200D0B57D /* mailbox */,
-				A5E1DB202ECFE27400D0B57D /* mailboxTests */,
-				A5E1DB2A2ECFE27400D0B57D /* mailboxUITests */,
+				A5E1DB132ECFE27200D0B57D /* talkbox */,
+				A5E1DB202ECFE27400D0B57D /* talkboxTests */,
+				A5E1DB2A2ECFE27400D0B57D /* talkboxUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -319,8 +317,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				A5443EE52ED2CB5800E98C19 /* Assets.xcassets in Resources */,
+				A5D07DA22F428BE000041AB8 /* AppIcon.icon in Resources */,
 				A5A8DB502F4056D600F3E61E /* GoogleService-Info.plist in Resources */,
-				A5F139CF2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +326,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				A5F139CE2ED2FB2C000C227B /* MailboxIcon 00-00-08-106.icon in Resources */,
+				A5D07DA12F428BE000041AB8 /* AppIcon.icon in Resources */,
 				A5A8DB4F2F4056D600F3E61E /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -383,12 +381,12 @@
 /* Begin PBXTargetDependency section */
 		A5E1DB232ECFE27400D0B57D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5E1DB132ECFE27200D0B57D /* mailbox */;
+			target = A5E1DB132ECFE27200D0B57D /* talkbox */;
 			targetProxy = A5E1DB222ECFE27400D0B57D /* PBXContainerItemProxy */;
 		};
 		A5E1DB2D2ECFE27400D0B57D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = A5E1DB132ECFE27200D0B57D /* mailbox */;
+			target = A5E1DB132ECFE27200D0B57D /* talkbox */;
 			targetProxy = A5E1DB2C2ECFE27400D0B57D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -513,12 +511,12 @@
 		A5E1DB362ECFE27400D0B57D /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -526,7 +524,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mailbox/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "talkbox t-1";
+				INFOPLIST_KEY_CFBundleDisplayName = talkbox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed by Stream SDK audio calls but never active.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Needed for talkbox audio room!";
@@ -565,12 +563,12 @@
 		A5E1DB372ECFE27400D0B57D /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ASSETCATALOG_COMPILER_APPICON_NAME = "MailboxIcon 00-00-08-106";
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
 				CODE_SIGN_ENTITLEMENTS = mailbox/mailbox.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 9;
 				DEVELOPMENT_TEAM = G2CVP4KJ2Q;
 				ENABLE_APP_SANDBOX = YES;
 				ENABLE_HARDENED_RUNTIME = YES;
@@ -578,7 +576,7 @@
 				ENABLE_USER_SELECTED_FILES = readonly;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = mailbox/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "talkbox t-1";
+				INFOPLIST_KEY_CFBundleDisplayName = talkbox;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_NSCameraUsageDescription = "Needed by Stream SDK audio calls but never active.";
 				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Needed for talkbox audio room!";
@@ -635,7 +633,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mailbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mailbox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/talkbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/talkbox";
 				XROS_DEPLOYMENT_TARGET = 26.1;
 			};
 			name = Debug;
@@ -661,7 +659,7 @@
 				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2,7";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/mailbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/mailbox";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/talkbox.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/talkbox";
 				XROS_DEPLOYMENT_TARGET = 26.1;
 			};
 			name = Release;
@@ -719,7 +717,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A5E1DB0F2ECFE27200D0B57D /* Build configuration list for PBXProject "mailbox" */ = {
+		A5E1DB0F2ECFE27200D0B57D /* Build configuration list for PBXProject "talkbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E1DB332ECFE27400D0B57D /* Debug */,
@@ -728,7 +726,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5E1DB352ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailbox" */ = {
+		A5E1DB352ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkbox" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E1DB362ECFE27400D0B57D /* Debug */,
@@ -737,7 +735,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5E1DB382ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailboxTests" */ = {
+		A5E1DB382ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkboxTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E1DB392ECFE27400D0B57D /* Debug */,
@@ -746,7 +744,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A5E1DB3B2ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "mailboxUITests" */ = {
+		A5E1DB3B2ECFE27400D0B57D /* Build configuration list for PBXNativeTarget "talkboxUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A5E1DB3C2ECFE27400D0B57D /* Debug */,
