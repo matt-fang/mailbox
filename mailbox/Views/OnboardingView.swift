@@ -12,7 +12,7 @@ struct OnboardingView: View {
     
     @State private var selectedName: String = "My name is"
     
-    var nameOptions: [String] = ["Matthew", "Atharva", "Noa", "Alfred", "Devon", "Hayden"]
+    var nameOptions: [String] = ["RealMatthew", "RealAtharva", "Noa", "Alfred", "Devon", "Hayden"]
     var friendPairs: [String: String] = ["Matthew" : "Atharva",
                                          "Atharva" : "Matthew",
                                          "Noa" : "Alfred",

@@ -3,9 +3,9 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyAlbjMOs7qXLv0H9a3lAHCKmDeApAcXL1k</string>
+	<string>AIzaSyBw6shpQxcpM2gCwHS2jgBiSRAovhbAZqE</string>
 	<key>GCM_SENDER_ID</key>
-	<string>684110944682</string>
+	<string>160423586722</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
@@ -15,18 +15,18 @@
 	<key>STORAGE_BUCKET</key>
 	<string>talkbox-592ae.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
-	<false/>
+	<false></false>
 	<key>IS_APPINVITE_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_GCM_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>IS_SIGNIN_ENABLED</key>
-	<true/>
+	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:684110944682:ios:bbc62931c6f35b9b1973d3</string>
+	<string>1:160423586722:ios:2b81d797275f60ee1320fb</string>
 	<key>DATABASE_URL</key>
-	<string>https://talkbox-592ae-default-rtdb.firebaseio.com/</string>
+	<string>https://talkbox-592ae-default-rtdb.firebaseio.com</string>
 </dict>
 </plist>
